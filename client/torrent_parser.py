@@ -57,13 +57,4 @@ class Torrent(object):
         except Exception as e:
             print(f'Error extracting metadata: {e}')
             
-    # returns the info hash in hex format
-    def get_info_hash(self):
-        return self.info_hash.hex()
         
-torrent = Torrent("torrent name here") # path to the .torrent file
-print("Info Hash (Hex):", torrent.get_info_hash())
-print("Total Length:", torrent.length)
-print("Piece Length:", torrent.piece_length)
-print("Number of Pieces:", len(torrent.pieces))
-print("File Name:", torrent.file_name)
